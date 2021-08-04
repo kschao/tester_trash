@@ -1,1 +1,1 @@
-# trashcollect
+# Django_Trash_Collector
