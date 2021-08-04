@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Create Customer Account</title>
+</head>
+<body>
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+<form action="{% url 'customers:create' %}" method="post">
+  {% csrf_token %}
+  Name:<input type="text" name="name" id="name"><br>
+  Address:<input type="text" name="address" id="address"><br>
+  Zip code:<input type="text" name="zipcode" id="zip_ode"><br>
+  Pickup day(Mon-Fri):<input type="text" name="pickup_day" id="pickup_day"><br>
+    <input type="submit" value="Create Customer">
+</form>
+</body>
+</html>
