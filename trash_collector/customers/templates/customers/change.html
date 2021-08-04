@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Change Pickup Day</title>
+</head>
+<body>
+<p><a href="{% url 'logout' %}">Log Out</a></p>
+<form action="{% url 'customers:change' %}" method="post">
+  {% csrf_token %}
+  Pickup Day(Mon-Fri):<input type="text" name="pickup_day" id="pickup_day" value="{{customers.pickup_day}}"><br>
+  Additional Pickup:<input type="date" name="onetime_pickup" id="onetime_pickup" value="{{customers.onetime_pickup}}"><br>
+  Suspend Start:<input type="date" name="suspend_start" id="suspend_start" value="{{customers.suspend_start}}"><br>
+  Suspend End:<input type="date" name="suspend_end" id="suspend_end" value="{{customers.suspend_end}}"><br>
+    <input type="submit" value="Save Changes">
+</form>
+</body>
+</html>
