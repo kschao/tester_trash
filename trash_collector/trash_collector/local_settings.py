@@ -10,7 +10,7 @@ SECRET_KEY = '-2#se2w2t^20h%7g6_6+(zztxlmz#99f*r(dgsri7@ip_8zov@'
 DATABASES = {
     'default': {
         'ENGINE': 'mysql.connector.django',
-        'NAME': 'trash_collector',
+        'NAME': 'tester_trash',
         'USER': 'root',
         'PASSWORD': 'Sept092219!',
         'HOST': '127.0.0.1',
