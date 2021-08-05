@@ -33,7 +33,7 @@ def create(request):
     else:
         return render(request, 'customers/create.html')
     # It will be necessary while creating a Customer/Employee to assign request.user as the user foreign key
-def change_pickup(request):
+def change(request):
     if request.method == "POST":
         user = request.user
         log_in_customer = Customer.objects.get(user=user)
@@ -51,7 +51,7 @@ def change_pickup(request):
     }
         return render(request, 'customers/change.html', context)
 
-def account_detail(request):
+def account(request):
     user = request.user
     log_in_customer = Customer.objects.get(user=user)
     context = {
